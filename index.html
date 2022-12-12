@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko_KR" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>New_도서관 홈페이지</title>
+    <style>
+    #TITLEtext{
+      color:black;
+
+    }
+    .clock{
+      font-size: 100px;
+      text-align: center;
+      margin-top: 50px;
+      font-weight: bold;
+    }
+
+    .TITLE{
+      margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+
+
+    }
+
+    .BUTTONA{
+
+      text-align: center;
+      margin-right: 30px;
+      vertical-align: middle;
+      padding: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 20px;
+      color:white;
+
+    }
+    .BUTTONA:hover{
+
+      background-color: #282828;
+
+
+    }
+    .MENU{
+      text-align: right;
+      width: 100vw;
+      background-color: #3c3c3c;
+      padding-top:10px;
+      padding-bottom: 10px;
+      margin-left: 0px;
+    }
+
+
+
+
+    #BOOKplace{
+
+      /*text-align: center;*/
+      margin-top: 500px;
+
+      display: flex;
+      flex-direction: column;
+      /*margin-left: 42vw*/
+      flex-wrap: nowrap;
+      text-align: center;
+      width: 100vw;
+
+    }
+    .BOOKplaceInput{
+      font-size: 20px;
+      /*text-align: center;*/
+      margin-top: 20px;
+
+
+    }
+    .BOOKplaceInput > input{
+      font-size: 40px;
+    }
+    #input-BOOKsearch{
+background-color: #3c3c3c;
+
+border: none;
+color: white;
+padding-left: 5.2%;
+padding-right: 5.2%;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+    }
+    #input-BOOKsearch:hover{
+      background-color: #282828;
+    }
+
+
+    #BOOKplace > label{
+      font-size: 40px;
+    }
+
+
+
+
+    a{
+          text-decoration: none;
+    }
+
+    </style>
+    <script src="bookPlace.js">
+
+    </script>
+  </head>
+  <body style="margin:0px;">
+    <div class="TOP">
+      <div class="MENU">
+        <a href="#BOOKplace" class="BUTTONA">도서 위치 검색</a>
+        <a href="#menu2" class="BUTTONA">메뉴2</a>
+        <a href="#menu3" class="BUTTONA">메뉴3</a>
+
+      </div>
+
+<a href="index.html" id="TITLEid">
+      <div class="TITLE">
+        <img src="장중로고.jpg" style="width:50px;height:50px;margin-right:10px;" class="TITLEitem">
+        <h1 id="TITLEtext" class="TITLEitem" style="font-size: 50px;">장호원 중학교 도서관</h1>
+      </div>
+      </a>
+    </div>
+
+
+
+<div class="clock"><!--시계-->
+  <span class="A">
+        ^^
+  </span>
+
+
+  <span class="Mclock">
+
+    <script src="clock.js"></script>
+  </span>
+</div>
+
+<div class="RECOMbook">
+  <span><script type="text/javascript" src="RECOMbook.js"></script></span>
+
+</div>
+<!--<iframe src="www.naver.com" width="100%vw" height="300"></iframe>-->
+
+
+  <!--도서 위치 기능-->
+
+<div id="BOOKplace">
+<label for="BOOKplaceInput">도서 위치 검색</label>
+
+
+<div class="BOOKplaceInput">
+<input id="input-YEAR" type="text" value="" placeholder="책 출간 연도" maxlength="4" size=9>
+</div>
+
+
+<div class="BOOKplaceInput">
+<input id="input-BOOKnumber" type="text" value="" placeholder="책 청구기호" size=9>
+</div>
+
+<div class="BOOKplaceInput">
+<input type="button" id="input-BOOKsearch" value="검색" onclick="
+let Year = document.querySelector('#input-YEAR').value;
+let Number = document.querySelector('#input-BOOKnumber').value;
+startBOOKsearch(Year, Number);
+console.log(Year, Number);
+">
+</div>
+
+
+</div>
+
+
+
+
+
+  </body>
+</html>
